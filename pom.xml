@@ -9,8 +9,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>registration-login-springboot-security-thymeleaf</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Copa america news</name>
+	<description>Demo project for News website</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
