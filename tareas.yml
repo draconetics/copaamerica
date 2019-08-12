@@ -1,0 +1,21 @@
+---
+- hosts: webservers
+  user: root
+  
+  tasks:
+   - name: Install Java 8
+     apt:
+      name: openjdk-8-jre
+      state: present
+   - name: Install Maven
+     apt: 
+      name: mvn
+      state: present
+   - name: Copy artifact
+     copy:
+      src: /var/lib/jenkins/workspace/copaamerica/target/news-0.0.1-SNAPSHOT.jar
+      dest: /home/osboxes/Documents/build/
+   - name: Run webpage
+     shell: java -jar /home/osboxes/Documents/build/blog-demo-0.0.1-SNAPSHOT.jar
+     async: 2592000
+     poll: 0
