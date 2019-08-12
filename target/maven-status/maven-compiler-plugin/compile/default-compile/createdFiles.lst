@@ -1,0 +1,13 @@
+net\javaguides\springboot\springsecurity\model\Role.class
+net\javaguides\springboot\springsecurity\constraint\FieldMatch$List.class
+net\javaguides\springboot\springsecurity\web\UserRegistrationController.class
+net\javaguides\springboot\springsecurity\constraint\FieldMatch.class
+net\javaguides\springboot\springsecurity\service\UserServiceImpl.class
+net\javaguides\springboot\springsecurity\constraint\FieldMatchValidator.class
+net\javaguides\springboot\springsecurity\config\SecurityConfiguration.class
+net\javaguides\springboot\springsecurity\repository\UserRepository.class
+net\javaguides\springboot\springsecurity\web\dto\UserRegistrationDto.class
+net\javaguides\springboot\springsecurity\Application.class
+net\javaguides\springboot\springsecurity\web\MainController.class
+net\javaguides\springboot\springsecurity\model\User.class
+net\javaguides\springboot\springsecurity\service\UserService.class

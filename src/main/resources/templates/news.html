@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+ th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+<title>Registration</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		
+	<div class="container-fluid">
+	    <div class="navbar-header ">
+	      	<a class="navbar-brand" th:href="@{/login}">
+			   <img th:src="@{/img/logo.png}" alt="Logo" style="max-width:120px;">
+			</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a th:href="@{/login}">Home</a></li>
+	      <li><a th:href="@{/news}">News</a></li>
+	      <li><a th:href="@{/login}">Organizacion</a></li>
+	      <li><a th:href="@{/login}">Equipos</a></li>
+	    </ul>
+	   
+	</div>
+</nav>
+
+
+	<div class="container" style="margin-top: 100px;">
+
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+				<h2>Noticias</h2>
+				<hr>
+				<div class="row" th:if="${list != null}" >
+				   
+				      <div class="col-md-4" th:each="item : ${list}">
+					       <div class="media bg-warning m-3" style="border-radius:10px;padding:20px;margin-bottom:20px;">
+								<a th:href="@{${item.url}}" target="_blank">
+							  		<img th:src="${item.image}" class="media-object" style="max-width:150px">
+							  	</a>
+							  <hr>
+							  <div class="media-body">
+							  	<a th:href="@{${item.url}}" target="_blank">
+							    	<h4 class="media-heading" th:text="${item.title}">John Doe</h4>
+							    </a>
+							    <p th:text="${item.content}"></p>
+							    <a th:href="@{${item.url}}" class="btn btn-primary" target="_blank">Read More</a>
+							  </div>
+							</div> 
+				      </div>
+				      
+				</div>
+				
+				
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

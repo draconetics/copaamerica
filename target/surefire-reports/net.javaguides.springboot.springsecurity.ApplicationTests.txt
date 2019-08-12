@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: net.javaguides.springboot.springsecurity.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.222 s <<< FAILURE! - in net.javaguides.springboot.springsecurity.ApplicationTests
+contextLoads(net.javaguides.springboot.springsecurity.ApplicationTests)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [net.javaguides.springboot.springsecurity.config.SecurityConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@42a57993]
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+
